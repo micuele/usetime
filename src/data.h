@@ -3,11 +3,15 @@
 #include <string.h>
 #include <math.h>
 
-typedef struct{
-int ghours;
-int gminutes;
-int gseconds;
+#ifndef DATA_H
+#define DATA_H
+
+typedef struct {
+    int ghours;
+    int gminutes;
+    int gseconds;
 } Hms;
 
 extern Hms hms;
 
+#endif

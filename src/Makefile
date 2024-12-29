@@ -9,13 +9,10 @@ all: $(OBJDIR) test
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
-$(OBJDIR)/chart.o: $(SRCDIR)/chart.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(OBJDIR)/main.o: main.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-test: $(OBJDIR)/chart.o $(OBJDIR)/main.o
+test: $(OBJDIR)/main.o
 	$(CC) $^ -o $@ $(LDFLAGS)
 
 run: test
